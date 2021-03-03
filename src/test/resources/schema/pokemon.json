@@ -1,0 +1,1284 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "required": [
+    "abilities",
+    "base_experience",
+    "forms",
+    "game_indices",
+    "height",
+    "held_items",
+    "id",
+    "is_default",
+    "location_area_encounters",
+    "moves",
+    "name",
+    "order",
+    "past_types",
+    "species",
+    "sprites",
+    "stats",
+    "types",
+    "weight"
+  ],
+  "properties": {
+    "abilities": {
+      "$id": "#/properties/abilities",
+      "type": "array",
+      "additionalItems": true,
+      "items": {
+        "$id": "#/properties/abilities/items",
+        "anyOf": [
+          {
+            "$id": "#/properties/abilities/items/anyOf/0",
+            "type": "object",
+            "required": [
+              "ability",
+              "is_hidden",
+              "slot"
+            ],
+            "properties": {
+              "ability": {
+                "$id": "#/properties/abilities/items/anyOf/0/properties/ability",
+                "type": "object",
+                "required": [
+                  "name",
+                  "url"
+                ],
+                "properties": {
+                  "name": {
+                    "$id": "#/properties/abilities/items/anyOf/0/properties/ability/properties/name",
+                    "type": "string"
+                  },
+                  "url": {
+                    "$id": "#/properties/abilities/items/anyOf/0/properties/ability/properties/url",
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              },
+              "is_hidden": {
+                "$id": "#/properties/abilities/items/anyOf/0/properties/is_hidden",
+                "type": "boolean"
+              },
+              "slot": {
+                "$id": "#/properties/abilities/items/anyOf/0/properties/slot",
+                "type": "integer"
+              }
+            },
+            "additionalProperties": false
+          }
+        ]
+      }
+    },
+    "base_experience": {
+      "$id": "#/properties/base_experience",
+      "type": "integer"
+    },
+    "forms": {
+      "$id": "#/properties/forms",
+      "type": "array",
+      "additionalItems": true,
+      "items": {
+        "$id": "#/properties/forms/items",
+        "anyOf": [
+          {
+            "$id": "#/properties/forms/items/anyOf/0",
+            "type": "object",
+            "required": [
+              "name",
+              "url"
+            ],
+            "properties": {
+              "name": {
+                "$id": "#/properties/forms/items/anyOf/0/properties/name",
+                "type": "string"
+              },
+              "url": {
+                "$id": "#/properties/forms/items/anyOf/0/properties/url",
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        ]
+      }
+    },
+    "game_indices": {
+      "$id": "#/properties/game_indices",
+      "type": "array",
+      "additionalItems": true,
+      "items": {
+        "$id": "#/properties/game_indices/items",
+        "anyOf": [
+          {
+            "$id": "#/properties/game_indices/items/anyOf/0",
+            "type": "object",
+            "required": [
+              "game_index",
+              "version"
+            ],
+            "properties": {
+              "game_index": {
+                "$id": "#/properties/game_indices/items/anyOf/0/properties/game_index",
+                "type": "integer"
+              },
+              "version": {
+                "$id": "#/properties/game_indices/items/anyOf/0/properties/version",
+                "type": "object",
+                "required": [
+                  "name",
+                  "url"
+                ],
+                "properties": {
+                  "name": {
+                    "$id": "#/properties/game_indices/items/anyOf/0/properties/version/properties/name",
+                    "type": "string"
+                  },
+                  "url": {
+                    "$id": "#/properties/game_indices/items/anyOf/0/properties/version/properties/url",
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
+          }
+        ]
+      }
+    },
+    "height": {
+      "$id": "#/properties/height",
+      "type": "integer"
+    },
+    "held_items": {
+      "$id": "#/properties/held_items",
+      "type": "array",
+      "additionalItems": true,
+      "items": {
+        "$id": "#/properties/held_items/items",
+        "anyOf": [
+          {
+            "$id": "#/properties/held_items/items/anyOf/0",
+            "type": "object",
+            "required": [
+              "item",
+              "version_details"
+            ],
+            "properties": {
+              "item": {
+                "$id": "#/properties/held_items/items/anyOf/0/properties/item",
+                "type": "object",
+                "required": [
+                  "name",
+                  "url"
+                ],
+                "properties": {
+                  "name": {
+                    "$id": "#/properties/held_items/items/anyOf/0/properties/item/properties/name",
+                    "type": "string"
+                  },
+                  "url": {
+                    "$id": "#/properties/held_items/items/anyOf/0/properties/item/properties/url",
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              },
+              "version_details": {
+                "$id": "#/properties/held_items/items/anyOf/0/properties/version_details",
+                "type": "array",
+                "additionalItems": true,
+                "items": {
+                  "$id": "#/properties/held_items/items/anyOf/0/properties/version_details/items",
+                  "anyOf": [
+                    {
+                      "$id": "#/properties/held_items/items/anyOf/0/properties/version_details/items/anyOf/0",
+                      "type": "object",
+                      "required": [
+                        "rarity",
+                        "version"
+                      ],
+                      "properties": {
+                        "rarity": {
+                          "$id": "#/properties/held_items/items/anyOf/0/properties/version_details/items/anyOf/0/properties/rarity",
+                          "type": "integer"
+                        },
+                        "version": {
+                          "$id": "#/properties/held_items/items/anyOf/0/properties/version_details/items/anyOf/0/properties/version",
+                          "type": "object",
+                          "required": [
+                            "name",
+                            "url"
+                          ],
+                          "properties": {
+                            "name": {
+                              "$id": "#/properties/held_items/items/anyOf/0/properties/version_details/items/anyOf/0/properties/version/properties/name",
+                              "type": "string"
+                            },
+                            "url": {
+                              "$id": "#/properties/held_items/items/anyOf/0/properties/version_details/items/anyOf/0/properties/version/properties/url",
+                              "type": "string"
+                            }
+                          },
+                          "additionalProperties": false
+                        }
+                      },
+                      "additionalProperties": false
+                    }
+                  ]
+                }
+              }
+            },
+            "additionalProperties": false
+          }
+        ]
+      }
+    },
+    "id": {
+      "$id": "#/properties/id",
+      "type": "integer"
+    },
+    "is_default": {
+      "$id": "#/properties/is_default",
+      "type": "boolean"
+    },
+    "location_area_encounters": {
+      "$id": "#/properties/location_area_encounters",
+      "type": "string"
+    },
+    "moves": {
+      "$id": "#/properties/moves",
+      "type": "array",
+      "additionalItems": true,
+      "items": {
+        "$id": "#/properties/moves/items",
+        "anyOf": [
+          {
+            "$id": "#/properties/moves/items/anyOf/0",
+            "type": "object",
+            "required": [
+              "move",
+              "version_group_details"
+            ],
+            "properties": {
+              "move": {
+                "$id": "#/properties/moves/items/anyOf/0/properties/move",
+                "type": "object",
+                "required": [
+                  "name",
+                  "url"
+                ],
+                "properties": {
+                  "name": {
+                    "$id": "#/properties/moves/items/anyOf/0/properties/move/properties/name",
+                    "type": "string"
+                  },
+                  "url": {
+                    "$id": "#/properties/moves/items/anyOf/0/properties/move/properties/url",
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              },
+              "version_group_details": {
+                "$id": "#/properties/moves/items/anyOf/0/properties/version_group_details",
+                "type": "array",
+                "additionalItems": true,
+                "items": {
+                  "$id": "#/properties/moves/items/anyOf/0/properties/version_group_details/items",
+                  "anyOf": [
+                    {
+                      "$id": "#/properties/moves/items/anyOf/0/properties/version_group_details/items/anyOf/0",
+                      "type": "object",
+                      "required": [
+                        "level_learned_at",
+                        "move_learn_method",
+                        "version_group"
+                      ],
+                      "properties": {
+                        "level_learned_at": {
+                          "$id": "#/properties/moves/items/anyOf/0/properties/version_group_details/items/anyOf/0/properties/level_learned_at",
+                          "type": "integer"
+                        },
+                        "move_learn_method": {
+                          "$id": "#/properties/moves/items/anyOf/0/properties/version_group_details/items/anyOf/0/properties/move_learn_method",
+                          "type": "object",
+                          "required": [
+                            "name",
+                            "url"
+                          ],
+                          "properties": {
+                            "name": {
+                              "$id": "#/properties/moves/items/anyOf/0/properties/version_group_details/items/anyOf/0/properties/move_learn_method/properties/name",
+                              "type": "string"
+                            },
+                            "url": {
+                              "$id": "#/properties/moves/items/anyOf/0/properties/version_group_details/items/anyOf/0/properties/move_learn_method/properties/url",
+                              "type": "string"
+                            }
+                          },
+                          "additionalProperties": false
+                        },
+                        "version_group": {
+                          "$id": "#/properties/moves/items/anyOf/0/properties/version_group_details/items/anyOf/0/properties/version_group",
+                          "type": "object",
+                          "required": [
+                            "name",
+                            "url"
+                          ],
+                          "properties": {
+                            "name": {
+                              "$id": "#/properties/moves/items/anyOf/0/properties/version_group_details/items/anyOf/0/properties/version_group/properties/name",
+                              "type": "string"
+                            },
+                            "url": {
+                              "$id": "#/properties/moves/items/anyOf/0/properties/version_group_details/items/anyOf/0/properties/version_group/properties/url",
+                              "type": "string"
+                            }
+                          },
+                          "additionalProperties": false
+                        }
+                      },
+                      "additionalProperties": false
+                    }
+                  ]
+                }
+              }
+            },
+            "additionalProperties": false
+          }
+        ]
+      }
+    },
+    "name": {
+      "$id": "#/properties/name",
+      "type": "string"
+    },
+    "order": {
+      "$id": "#/properties/order",
+      "type": "integer"
+    },
+    "past_types": {
+      "$id": "#/properties/past_types",
+      "type": "array",
+      "additionalItems": true,
+      "items": {
+        "$id": "#/properties/past_types/items"
+      }
+    },
+    "species": {
+      "$id": "#/properties/species",
+      "type": "object",
+      "required": [
+        "name",
+        "url"
+      ],
+      "properties": {
+        "name": {
+          "$id": "#/properties/species/properties/name",
+          "type": "string"
+        },
+        "url": {
+          "$id": "#/properties/species/properties/url",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "sprites": {
+      "$id": "#/properties/sprites",
+      "type": "object",
+      "required": [
+        "back_default",
+        "back_female",
+        "back_shiny",
+        "back_shiny_female",
+        "front_default",
+        "front_female",
+        "front_shiny",
+        "front_shiny_female",
+        "other",
+        "versions"
+      ],
+      "properties": {
+        "back_default": {
+          "$id": "#/properties/sprites/properties/back_default",
+          "type": "string"
+        },
+        "back_female": {
+          "$id": "#/properties/sprites/properties/back_female",
+          "type": "null"
+        },
+        "back_shiny": {
+          "$id": "#/properties/sprites/properties/back_shiny",
+          "type": "string"
+        },
+        "back_shiny_female": {
+          "$id": "#/properties/sprites/properties/back_shiny_female",
+          "type": "null"
+        },
+        "front_default": {
+          "$id": "#/properties/sprites/properties/front_default",
+          "type": "string"
+        },
+        "front_female": {
+          "$id": "#/properties/sprites/properties/front_female",
+          "type": "null"
+        },
+        "front_shiny": {
+          "$id": "#/properties/sprites/properties/front_shiny",
+          "type": "string"
+        },
+        "front_shiny_female": {
+          "$id": "#/properties/sprites/properties/front_shiny_female",
+          "type": "null"
+        },
+        "other": {
+          "$id": "#/properties/sprites/properties/other",
+          "type": "object",
+          "required": [
+            "dream_world",
+            "official-artwork"
+          ],
+          "properties": {
+            "dream_world": {
+              "$id": "#/properties/sprites/properties/other/properties/dream_world",
+              "type": "object",
+              "required": [
+                "front_default",
+                "front_female"
+              ],
+              "properties": {
+                "front_default": {
+                  "$id": "#/properties/sprites/properties/other/properties/dream_world/properties/front_default",
+                  "type": "string"
+                },
+                "front_female": {
+                  "$id": "#/properties/sprites/properties/other/properties/dream_world/properties/front_female",
+                  "type": "null"
+                }
+              },
+              "additionalProperties": false
+            },
+            "official-artwork": {
+              "$id": "#/properties/sprites/properties/other/properties/official-artwork",
+              "type": "object",
+              "required": [
+                "front_default"
+              ],
+              "properties": {
+                "front_default": {
+                  "$id": "#/properties/sprites/properties/other/properties/official-artwork/properties/front_default",
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "additionalProperties": false
+        },
+        "versions": {
+          "$id": "#/properties/sprites/properties/versions",
+          "type": "object",
+          "required": [
+            "generation-i",
+            "generation-ii",
+            "generation-iii",
+            "generation-iv",
+            "generation-v",
+            "generation-vi",
+            "generation-vii",
+            "generation-viii"
+          ],
+          "properties": {
+            "generation-i": {
+              "$id": "#/properties/sprites/properties/versions/properties/generation-i",
+              "type": "object",
+              "required": [
+                "red-blue",
+                "yellow"
+              ],
+              "properties": {
+                "red-blue": {
+                  "$id": "#/properties/sprites/properties/versions/properties/generation-i/properties/red-blue",
+                  "type": "object",
+                  "required": [
+                    "back_default",
+                    "back_gray",
+                    "front_default",
+                    "front_gray"
+                  ],
+                  "properties": {
+                    "back_default": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-i/properties/red-blue/properties/back_default",
+                      "type": "string"
+                    },
+                    "back_gray": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-i/properties/red-blue/properties/back_gray",
+                      "type": "string"
+                    },
+                    "front_default": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-i/properties/red-blue/properties/front_default",
+                      "type": "string"
+                    },
+                    "front_gray": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-i/properties/red-blue/properties/front_gray",
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "yellow": {
+                  "$id": "#/properties/sprites/properties/versions/properties/generation-i/properties/yellow",
+                  "type": "object",
+                  "required": [
+                    "back_default",
+                    "back_gray",
+                    "front_default",
+                    "front_gray"
+                  ],
+                  "properties": {
+                    "back_default": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-i/properties/yellow/properties/back_default",
+                      "type": "string"
+                    },
+                    "back_gray": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-i/properties/yellow/properties/back_gray",
+                      "type": "string"
+                    },
+                    "front_default": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-i/properties/yellow/properties/front_default",
+                      "type": "string"
+                    },
+                    "front_gray": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-i/properties/yellow/properties/front_gray",
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "additionalProperties": false
+            },
+            "generation-ii": {
+              "$id": "#/properties/sprites/properties/versions/properties/generation-ii",
+              "type": "object",
+              "required": [
+                "crystal",
+                "gold",
+                "silver"
+              ],
+              "properties": {
+                "crystal": {
+                  "$id": "#/properties/sprites/properties/versions/properties/generation-ii/properties/crystal",
+                  "type": "object",
+                  "required": [
+                    "back_default",
+                    "back_shiny",
+                    "front_default",
+                    "front_shiny"
+                  ],
+                  "properties": {
+                    "back_default": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-ii/properties/crystal/properties/back_default",
+                      "type": "string"
+                    },
+                    "back_shiny": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-ii/properties/crystal/properties/back_shiny",
+                      "type": "string"
+                    },
+                    "front_default": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-ii/properties/crystal/properties/front_default",
+                      "type": "string"
+                    },
+                    "front_shiny": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-ii/properties/crystal/properties/front_shiny",
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "gold": {
+                  "$id": "#/properties/sprites/properties/versions/properties/generation-ii/properties/gold",
+                  "type": "object",
+                  "required": [
+                    "back_default",
+                    "back_shiny",
+                    "front_default",
+                    "front_shiny"
+                  ],
+                  "properties": {
+                    "back_default": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-ii/properties/gold/properties/back_default",
+                      "type": "string"
+                    },
+                    "back_shiny": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-ii/properties/gold/properties/back_shiny",
+                      "type": "string"
+                    },
+                    "front_default": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-ii/properties/gold/properties/front_default",
+                      "type": "string"
+                    },
+                    "front_shiny": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-ii/properties/gold/properties/front_shiny",
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "silver": {
+                  "$id": "#/properties/sprites/properties/versions/properties/generation-ii/properties/silver",
+                  "type": "object",
+                  "required": [
+                    "back_default",
+                    "back_shiny",
+                    "front_default",
+                    "front_shiny"
+                  ],
+                  "properties": {
+                    "back_default": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-ii/properties/silver/properties/back_default",
+                      "type": "string"
+                    },
+                    "back_shiny": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-ii/properties/silver/properties/back_shiny",
+                      "type": "string"
+                    },
+                    "front_default": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-ii/properties/silver/properties/front_default",
+                      "type": "string"
+                    },
+                    "front_shiny": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-ii/properties/silver/properties/front_shiny",
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "additionalProperties": false
+            },
+            "generation-iii": {
+              "$id": "#/properties/sprites/properties/versions/properties/generation-iii",
+              "type": "object",
+              "required": [
+                "emerald",
+                "firered-leafgreen",
+                "ruby-sapphire"
+              ],
+              "properties": {
+                "emerald": {
+                  "$id": "#/properties/sprites/properties/versions/properties/generation-iii/properties/emerald",
+                  "type": "object",
+                  "required": [
+                    "front_default",
+                    "front_shiny"
+                  ],
+                  "properties": {
+                    "front_default": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-iii/properties/emerald/properties/front_default",
+                      "type": "string"
+                    },
+                    "front_shiny": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-iii/properties/emerald/properties/front_shiny",
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "firered-leafgreen": {
+                  "$id": "#/properties/sprites/properties/versions/properties/generation-iii/properties/firered-leafgreen",
+                  "type": "object",
+                  "required": [
+                    "back_default",
+                    "back_shiny",
+                    "front_default",
+                    "front_shiny"
+                  ],
+                  "properties": {
+                    "back_default": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-iii/properties/firered-leafgreen/properties/back_default",
+                      "type": "string"
+                    },
+                    "back_shiny": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-iii/properties/firered-leafgreen/properties/back_shiny",
+                      "type": "string"
+                    },
+                    "front_default": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-iii/properties/firered-leafgreen/properties/front_default",
+                      "type": "string"
+                    },
+                    "front_shiny": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-iii/properties/firered-leafgreen/properties/front_shiny",
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "ruby-sapphire": {
+                  "$id": "#/properties/sprites/properties/versions/properties/generation-iii/properties/ruby-sapphire",
+                  "type": "object",
+                  "required": [
+                    "back_default",
+                    "back_shiny",
+                    "front_default",
+                    "front_shiny"
+                  ],
+                  "properties": {
+                    "back_default": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-iii/properties/ruby-sapphire/properties/back_default",
+                      "type": "string"
+                    },
+                    "back_shiny": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-iii/properties/ruby-sapphire/properties/back_shiny",
+                      "type": "string"
+                    },
+                    "front_default": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-iii/properties/ruby-sapphire/properties/front_default",
+                      "type": "string"
+                    },
+                    "front_shiny": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-iii/properties/ruby-sapphire/properties/front_shiny",
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "additionalProperties": false
+            },
+            "generation-iv": {
+              "$id": "#/properties/sprites/properties/versions/properties/generation-iv",
+              "type": "object",
+              "required": [
+                "diamond-pearl",
+                "heartgold-soulsilver",
+                "platinum"
+              ],
+              "properties": {
+                "diamond-pearl": {
+                  "$id": "#/properties/sprites/properties/versions/properties/generation-iv/properties/diamond-pearl",
+                  "type": "object",
+                  "required": [
+                    "back_default",
+                    "back_female",
+                    "back_shiny",
+                    "back_shiny_female",
+                    "front_default",
+                    "front_female",
+                    "front_shiny",
+                    "front_shiny_female"
+                  ],
+                  "properties": {
+                    "back_default": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-iv/properties/diamond-pearl/properties/back_default",
+                      "type": "string"
+                    },
+                    "back_female": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-iv/properties/diamond-pearl/properties/back_female",
+                      "type": "null"
+                    },
+                    "back_shiny": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-iv/properties/diamond-pearl/properties/back_shiny",
+                      "type": "string"
+                    },
+                    "back_shiny_female": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-iv/properties/diamond-pearl/properties/back_shiny_female",
+                      "type": "null"
+                    },
+                    "front_default": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-iv/properties/diamond-pearl/properties/front_default",
+                      "type": "string"
+                    },
+                    "front_female": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-iv/properties/diamond-pearl/properties/front_female",
+                      "type": "null"
+                    },
+                    "front_shiny": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-iv/properties/diamond-pearl/properties/front_shiny",
+                      "type": "string"
+                    },
+                    "front_shiny_female": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-iv/properties/diamond-pearl/properties/front_shiny_female",
+                      "type": "null"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "heartgold-soulsilver": {
+                  "$id": "#/properties/sprites/properties/versions/properties/generation-iv/properties/heartgold-soulsilver",
+                  "type": "object",
+                  "required": [
+                    "back_default",
+                    "back_female",
+                    "back_shiny",
+                    "back_shiny_female",
+                    "front_default",
+                    "front_female",
+                    "front_shiny",
+                    "front_shiny_female"
+                  ],
+                  "properties": {
+                    "back_default": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-iv/properties/heartgold-soulsilver/properties/back_default",
+                      "type": "string"
+                    },
+                    "back_female": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-iv/properties/heartgold-soulsilver/properties/back_female",
+                      "type": "null"
+                    },
+                    "back_shiny": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-iv/properties/heartgold-soulsilver/properties/back_shiny",
+                      "type": "string"
+                    },
+                    "back_shiny_female": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-iv/properties/heartgold-soulsilver/properties/back_shiny_female",
+                      "type": "null"
+                    },
+                    "front_default": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-iv/properties/heartgold-soulsilver/properties/front_default",
+                      "type": "string"
+                    },
+                    "front_female": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-iv/properties/heartgold-soulsilver/properties/front_female",
+                      "type": "null"
+                    },
+                    "front_shiny": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-iv/properties/heartgold-soulsilver/properties/front_shiny",
+                      "type": "string"
+                    },
+                    "front_shiny_female": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-iv/properties/heartgold-soulsilver/properties/front_shiny_female",
+                      "type": "null"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "platinum": {
+                  "$id": "#/properties/sprites/properties/versions/properties/generation-iv/properties/platinum",
+                  "type": "object",
+                  "required": [
+                    "back_default",
+                    "back_female",
+                    "back_shiny",
+                    "back_shiny_female",
+                    "front_default",
+                    "front_female",
+                    "front_shiny",
+                    "front_shiny_female"
+                  ],
+                  "properties": {
+                    "back_default": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-iv/properties/platinum/properties/back_default",
+                      "type": "string"
+                    },
+                    "back_female": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-iv/properties/platinum/properties/back_female",
+                      "type": "null"
+                    },
+                    "back_shiny": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-iv/properties/platinum/properties/back_shiny",
+                      "type": "string"
+                    },
+                    "back_shiny_female": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-iv/properties/platinum/properties/back_shiny_female",
+                      "type": "null"
+                    },
+                    "front_default": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-iv/properties/platinum/properties/front_default",
+                      "type": "string"
+                    },
+                    "front_female": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-iv/properties/platinum/properties/front_female",
+                      "type": "null"
+                    },
+                    "front_shiny": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-iv/properties/platinum/properties/front_shiny",
+                      "type": "string"
+                    },
+                    "front_shiny_female": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-iv/properties/platinum/properties/front_shiny_female",
+                      "type": "null"
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "additionalProperties": false
+            },
+            "generation-v": {
+              "$id": "#/properties/sprites/properties/versions/properties/generation-v",
+              "type": "object",
+              "required": [
+                "black-white"
+              ],
+              "properties": {
+                "black-white": {
+                  "$id": "#/properties/sprites/properties/versions/properties/generation-v/properties/black-white",
+                  "type": "object",
+                  "required": [
+                    "animated",
+                    "back_default",
+                    "back_female",
+                    "back_shiny",
+                    "back_shiny_female",
+                    "front_default",
+                    "front_female",
+                    "front_shiny",
+                    "front_shiny_female"
+                  ],
+                  "properties": {
+                    "animated": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-v/properties/black-white/properties/animated",
+                      "type": "object",
+                      "required": [
+                        "back_default",
+                        "back_female",
+                        "back_shiny",
+                        "back_shiny_female",
+                        "front_default",
+                        "front_female",
+                        "front_shiny",
+                        "front_shiny_female"
+                      ],
+                      "properties": {
+                        "back_default": {
+                          "$id": "#/properties/sprites/properties/versions/properties/generation-v/properties/black-white/properties/animated/properties/back_default",
+                          "type": "string"
+                        },
+                        "back_female": {
+                          "$id": "#/properties/sprites/properties/versions/properties/generation-v/properties/black-white/properties/animated/properties/back_female",
+                          "type": "null"
+                        },
+                        "back_shiny": {
+                          "$id": "#/properties/sprites/properties/versions/properties/generation-v/properties/black-white/properties/animated/properties/back_shiny",
+                          "type": "string"
+                        },
+                        "back_shiny_female": {
+                          "$id": "#/properties/sprites/properties/versions/properties/generation-v/properties/black-white/properties/animated/properties/back_shiny_female",
+                          "type": "null"
+                        },
+                        "front_default": {
+                          "$id": "#/properties/sprites/properties/versions/properties/generation-v/properties/black-white/properties/animated/properties/front_default",
+                          "type": "string"
+                        },
+                        "front_female": {
+                          "$id": "#/properties/sprites/properties/versions/properties/generation-v/properties/black-white/properties/animated/properties/front_female",
+                          "type": "null"
+                        },
+                        "front_shiny": {
+                          "$id": "#/properties/sprites/properties/versions/properties/generation-v/properties/black-white/properties/animated/properties/front_shiny",
+                          "type": "string"
+                        },
+                        "front_shiny_female": {
+                          "$id": "#/properties/sprites/properties/versions/properties/generation-v/properties/black-white/properties/animated/properties/front_shiny_female",
+                          "type": "null"
+                        }
+                      },
+                      "additionalProperties": false
+                    },
+                    "back_default": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-v/properties/black-white/properties/back_default",
+                      "type": "string"
+                    },
+                    "back_female": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-v/properties/black-white/properties/back_female",
+                      "type": "null"
+                    },
+                    "back_shiny": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-v/properties/black-white/properties/back_shiny",
+                      "type": "string"
+                    },
+                    "back_shiny_female": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-v/properties/black-white/properties/back_shiny_female",
+                      "type": "null"
+                    },
+                    "front_default": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-v/properties/black-white/properties/front_default",
+                      "type": "string"
+                    },
+                    "front_female": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-v/properties/black-white/properties/front_female",
+                      "type": "null"
+                    },
+                    "front_shiny": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-v/properties/black-white/properties/front_shiny",
+                      "type": "string"
+                    },
+                    "front_shiny_female": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-v/properties/black-white/properties/front_shiny_female",
+                      "type": "null"
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "additionalProperties": false
+            },
+            "generation-vi": {
+              "$id": "#/properties/sprites/properties/versions/properties/generation-vi",
+              "type": "object",
+              "required": [
+                "omegaruby-alphasapphire",
+                "x-y"
+              ],
+              "properties": {
+                "omegaruby-alphasapphire": {
+                  "$id": "#/properties/sprites/properties/versions/properties/generation-vi/properties/omegaruby-alphasapphire",
+                  "type": "object",
+                  "required": [
+                    "front_default",
+                    "front_female",
+                    "front_shiny",
+                    "front_shiny_female"
+                  ],
+                  "properties": {
+                    "front_default": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-vi/properties/omegaruby-alphasapphire/properties/front_default",
+                      "type": "string"
+                    },
+                    "front_female": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-vi/properties/omegaruby-alphasapphire/properties/front_female",
+                      "type": "null"
+                    },
+                    "front_shiny": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-vi/properties/omegaruby-alphasapphire/properties/front_shiny",
+                      "type": "string"
+                    },
+                    "front_shiny_female": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-vi/properties/omegaruby-alphasapphire/properties/front_shiny_female",
+                      "type": "null"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "x-y": {
+                  "$id": "#/properties/sprites/properties/versions/properties/generation-vi/properties/x-y",
+                  "type": "object",
+                  "required": [
+                    "front_default",
+                    "front_female",
+                    "front_shiny",
+                    "front_shiny_female"
+                  ],
+                  "properties": {
+                    "front_default": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-vi/properties/x-y/properties/front_default",
+                      "type": "string"
+                    },
+                    "front_female": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-vi/properties/x-y/properties/front_female",
+                      "type": "null"
+                    },
+                    "front_shiny": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-vi/properties/x-y/properties/front_shiny",
+                      "type": "string"
+                    },
+                    "front_shiny_female": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-vi/properties/x-y/properties/front_shiny_female",
+                      "type": "null"
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "additionalProperties": false
+            },
+            "generation-vii": {
+              "$id": "#/properties/sprites/properties/versions/properties/generation-vii",
+              "type": "object",
+              "required": [
+                "icons",
+                "ultra-sun-ultra-moon"
+              ],
+              "properties": {
+                "icons": {
+                  "$id": "#/properties/sprites/properties/versions/properties/generation-vii/properties/icons",
+                  "type": "object",
+                  "required": [
+                    "front_default",
+                    "front_female"
+                  ],
+                  "properties": {
+                    "front_default": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-vii/properties/icons/properties/front_default",
+                      "type": "string"
+                    },
+                    "front_female": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-vii/properties/icons/properties/front_female",
+                      "type": "null"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "ultra-sun-ultra-moon": {
+                  "$id": "#/properties/sprites/properties/versions/properties/generation-vii/properties/ultra-sun-ultra-moon",
+                  "type": "object",
+                  "required": [
+                    "front_default",
+                    "front_female",
+                    "front_shiny",
+                    "front_shiny_female"
+                  ],
+                  "properties": {
+                    "front_default": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-vii/properties/ultra-sun-ultra-moon/properties/front_default",
+                      "type": "string"
+                    },
+                    "front_female": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-vii/properties/ultra-sun-ultra-moon/properties/front_female",
+                      "type": "null"
+                    },
+                    "front_shiny": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-vii/properties/ultra-sun-ultra-moon/properties/front_shiny",
+                      "type": "string"
+                    },
+                    "front_shiny_female": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-vii/properties/ultra-sun-ultra-moon/properties/front_shiny_female",
+                      "type": "null"
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "additionalProperties": false
+            },
+            "generation-viii": {
+              "$id": "#/properties/sprites/properties/versions/properties/generation-viii",
+              "type": "object",
+              "required": [
+                "icons"
+              ],
+              "properties": {
+                "icons": {
+                  "$id": "#/properties/sprites/properties/versions/properties/generation-viii/properties/icons",
+                  "type": "object",
+                  "required": [
+                    "front_default",
+                    "front_female"
+                  ],
+                  "properties": {
+                    "front_default": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-viii/properties/icons/properties/front_default",
+                      "type": "string"
+                    },
+                    "front_female": {
+                      "$id": "#/properties/sprites/properties/versions/properties/generation-viii/properties/icons/properties/front_female",
+                      "type": "null"
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "stats": {
+      "$id": "#/properties/stats",
+      "type": "array",
+      "additionalItems": true,
+      "items": {
+        "$id": "#/properties/stats/items",
+        "anyOf": [
+          {
+            "$id": "#/properties/stats/items/anyOf/0",
+            "type": "object",
+            "required": [
+              "base_stat",
+              "effort",
+              "stat"
+            ],
+            "properties": {
+              "base_stat": {
+                "$id": "#/properties/stats/items/anyOf/0/properties/base_stat",
+                "type": "integer"
+              },
+              "effort": {
+                "$id": "#/properties/stats/items/anyOf/0/properties/effort",
+                "type": "integer"
+              },
+              "stat": {
+                "$id": "#/properties/stats/items/anyOf/0/properties/stat",
+                "type": "object",
+                "required": [
+                  "name",
+                  "url"
+                ],
+                "properties": {
+                  "name": {
+                    "$id": "#/properties/stats/items/anyOf/0/properties/stat/properties/name",
+                    "type": "string"
+                  },
+                  "url": {
+                    "$id": "#/properties/stats/items/anyOf/0/properties/stat/properties/url",
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
+          }
+        ]
+      }
+    },
+    "types": {
+      "$id": "#/properties/types",
+      "type": "array",
+      "additionalItems": true,
+      "items": {
+        "$id": "#/properties/types/items",
+        "anyOf": [
+          {
+            "$id": "#/properties/types/items/anyOf/0",
+            "type": "object",
+            "required": [
+              "slot",
+              "type"
+            ],
+            "properties": {
+              "slot": {
+                "$id": "#/properties/types/items/anyOf/0/properties/slot",
+                "type": "integer"
+              },
+              "type": {
+                "$id": "#/properties/types/items/anyOf/0/properties/type",
+                "type": "object",
+                "required": [
+                  "name",
+                  "url"
+                ],
+                "properties": {
+                  "name": {
+                    "$id": "#/properties/types/items/anyOf/0/properties/type/properties/name",
+                    "type": "string"
+                  },
+                  "url": {
+                    "$id": "#/properties/types/items/anyOf/0/properties/type/properties/url",
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
+          }
+        ]
+      }
+    },
+    "weight": {
+      "$id": "#/properties/weight",
+      "type": "integer"
+    }
+  },
+  "additionalProperties": false
+}

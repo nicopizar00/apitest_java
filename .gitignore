@@ -1,0 +1,28 @@
+# Maven
+target
+report
+
+# TestNG
+test-output
+
+#Allure
+allure-results
+
+#Docker
+docker-compose.yml
+
+# Eclipse
+.metadata
+.settings
+.classpath
+.project
+
+# IntelliJ IDEA
+.idea
+*.iml
+
+# Windows
+RemoteSystemsTempFiles
+
+# Mac
+.DS_Store
